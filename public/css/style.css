@@ -1,0 +1,42 @@
+table{
+               
+    font-family: arial, sans-serif;
+    
+    width: 100%;
+    
+    
+    border:  "2px";
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    
+    padding: 5px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+#main-header { 
+    top: -25px;
+     height: 40px;
+    background-color: white; 
+    width: 100%;
+    left: 0;
+
+    position: fixed;
+     
+    
+ }
+ body{
+     margin: 0;
+     padding: 0;
+     padding-top: 40px;
+ }
+ #salto_de_linea{
+     display: block;
+     page-break-before: always;
+ }
+
+ p{
+     font-size: 70px;
+ }
