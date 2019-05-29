@@ -6,5 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Puesto extends Model
 {
+    protected $table = 'puestos';
+
+    protected $fillable = [
+        'id',
+        'puesto_personal'
+
+    ];
 
 }

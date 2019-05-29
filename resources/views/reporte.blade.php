@@ -12,24 +12,21 @@
     <body>
     
         <header id="main-header" >
-            <img src="images/escudo.png" class="rounded  float-left" width="100px" height="80px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <img src="images/seproci.png" class="rounded float-right" width="100px" height="80px">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/escudo.png" class="rounded  float-left" width="50px" height="70px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="images/seproci.png" class="rounded float-right" width=150px" height="70px">
         </header>
         
          <!--      Persona Tipo 1          -->
         
         @foreach ($Personas as $P)
-        <table >
-           
-                
-           
+        <table align="center" >
             <tr>
-            <td colspan="2" >{{$P->nombre}} {{$P->apellido_paterno}} {{$P->apellido_materno}}<br>
+            <td colspan="2"  id="negritas">{{$P->nombre}} {{$P->apellido_paterno}} {{$P->apellido_materno}}<br>
 				{{$P->cargo}} <br>
 				Cumpleaños: {{$P->cumpleaños}}
 				</td>
-            <td rowspan="3"> 
-                <img src="{{ asset('storage').'/'. $P->foto}}" class="img-thumbnail img-fluid" alt="" width="100">
+            <td rowspan="3" align="center"> 
+                <img src="{{ asset('storage').'/'. $P->foto}}" class="img-thumbnail img-fluid" alt="" width="150">
             </td>
             </tr>
             <tr>
@@ -62,29 +59,27 @@
         <br>
         <br>
         <br>
-        <br>
         
         @endforeach
          <!--      Persona Tipo 2          -->
         <div id="salto_de_linea"></div>
             <div class="content" style="text-align: center">
-                <p>Secretarias <br>
+                <p>Secretarías <br>
                 Del Estado <br>
                 De<br>
                 Campeche</p>
             </div>
             <div id="salto_de_linea"></div>
             @foreach ($Personas2 as $P2)
-           <br>
-        <table >
-           
+            
+        <table  align="center">
             <tr>
-            <td colspan="2" >{{$P2->nombre}} {{$P2->apellido_paterno}} {{$P2->apellido_materno}}<br>
+            <td colspan="2" id="negritas">{{$P2->nombre}} {{$P2->apellido_paterno}} {{$P2->apellido_materno}}<br>
 				{{$P2->cargo}} <br>
 				Cumpleaños: {{$P2->cumpleaños}}
 				</td>
-            <td rowspan="3"> 
-                <img src="{{ asset('storage').'/'. $P2->foto}}" class="img-thumbnail img-fluid" alt="" width="100">
+            <td rowspan="3" align="center"> 
+                <img src="{{ asset('storage').'/'. $P2->foto}}" class="img-thumbnail img-fluid" alt="" width="120">
             </td>
             </tr>
             <tr>
@@ -117,7 +112,7 @@
         <br>
         <br>
         <br>
-        <br>
+        
          <!--      Persona Tipo 3          -->
         @endforeach 
 
@@ -130,15 +125,15 @@
             <div id="salto_de_linea"></div>
             @foreach ($Personas3 as $P3)
            <br>
-        <table >
+        <table align="center">
            
             <tr>
-            <td colspan="2" >{{$P3->nombre}} {{$P3->apellido_paterno}} {{$P3->apellido_materno}}<br>
+            <td colspan="2" id="negritas" >{{$P3->nombre}} {{$P3->apellido_paterno}} {{$P3->apellido_materno}}<br>
 				{{$P3->cargo}} <br>
 				Cumpleaños: {{$P3->cumpleaños}}
 				</td>
-            <td rowspan="3"> 
-                <img src="{{ asset('storage').'/'. $P3->foto}}" class="img-thumbnail img-fluid" alt="" width="100">
+            <td rowspan="3" align="center"> 
+                <img src="{{ asset('storage').'/'. $P3->foto}}" class="img-thumbnail img-fluid" alt="" width="150">
             </td>
             </tr>
             <tr>
@@ -186,15 +181,15 @@
             <div id="salto_de_linea"></div>
             @foreach ($Personas4 as $P4)
            <br>
-        <table >
+        <table align="center" >
            
             <tr>
-            <td colspan="2" >{{$P4->nombre}} {{$P4->apellido_paterno}} {{$P4->apellido_materno}}<br>
+            <td colspan="2" id="negritas" >{{$P4->nombre}} {{$P4->apellido_paterno}} {{$P4->apellido_materno}}<br>
 				{{$P4->cargo}} <br>
 				Cumpleaños: {{$P4->cumpleaños}}
 				</td>
-            <td rowspan="3"> 
-                <img src="{{ asset('storage').'/'. $P4->foto}}" class="img-thumbnail img-fluid" alt="" width="100">
+            <td rowspan="3" align="center"> 
+                <img src="{{ asset('storage').'/'. $P4->foto}}" class="img-thumbnail img-fluid" alt="" width="120">
             </td>
             </tr>
             <tr>
@@ -243,15 +238,15 @@
             <div id="salto_de_linea"></div>
             @foreach ($Personas5 as $P5)
            <br>
-        <table >
+        <table align="center">
            
             <tr>
-            <td colspan="2" >{{$P5->nombre}} {{$P5->apellido_paterno}} {{$P5->apellido_materno}}<br>
+            <td colspan="2" id="negritas" ><p>{{$P5->nombre}} {{$P5->apellido_paterno}} {{$P5->apellido_materno}}</p><br>
 				{{$P5->cargo}} <br>
 				Cumpleaños: {{$P5->cumpleaños}}
 				</td>
-            <td rowspan="3"> 
-                <img src="{{ asset('storage').'/'. $P5->foto}}" class="img-thumbnail img-fluid" alt="" width="100">
+            <td rowspan="3" align="center"> 
+                <img src="{{ asset('storage').'/'. $P5->foto}}" class="img-thumbnail img-fluid" alt="" width="120">
             </td>
             </tr>
             <tr>
@@ -299,15 +294,15 @@
             <div id="salto_de_linea"></div>
             @foreach ($Personas6 as $P6)
         <br>
-        <table >
+        <table align="center" >
         
             <tr>
-            <td colspan="2" >{{$P6->nombre}} {{$P6->apellido_paterno}} {{$P6->apellido_materno}}<br>
+            <td colspan="2" id="negritas">{{$P6->nombre}} {{$P6->apellido_paterno}} {{$P6->apellido_materno}}<br>
                 {{$P6->cargo}} <br>
                 Cumpleaños: {{$P6->cumpleaños}}
                 </td>
-            <td rowspan="3"> 
-                <img src="{{ asset('storage').'/'. $P6->foto}}" class="img-thumbnail img-fluid" alt="" width="100">
+            <td rowspan="3" align="center"> 
+                <img src="{{ asset('storage').'/'. $P6->foto}}" class="img-thumbnail img-fluid" alt="" width="120">
             </td>
             </tr>
             <tr>
@@ -354,15 +349,15 @@
             <div id="salto_de_linea"></div>
             @foreach ($Personas7 as $P7)
         <br>
-        <table >
+        <table align="center" >
         
             <tr>
-            <td colspan="2" >{{$P7->nombre}} {{$P7->apellido_paterno}} {{$P7->apellido_materno}}<br>
+            <td colspan="2" id="negritas">{{$P7->nombre}} {{$P7->apellido_paterno}} {{$P7->apellido_materno}}<br>
                 {{$P7->cargo}} <br>
                 Cumpleaños: {{$P7->cumpleaños}}
                 </td>
-            <td rowspan="3"> 
-                <img src="{{ asset('storage').'/'. $P7->foto}}" class="img-thumbnail img-fluid" alt="" width="100">
+            <td rowspan="3" align="center"> 
+                <img src="{{ asset('storage').'/'. $P7->foto}}" class="img-thumbnail img-fluid" alt="" width="120">
             </td>
             </tr>
             <tr>
@@ -410,15 +405,15 @@
         <div id="salto_de_linea"></div>
         @foreach ($Personas8 as $P8)
         <br>
-        <table >
+        <table align="center" >
 
         <tr>
-        <td colspan="2" >{{$P8->nombre}} {{$P8->apellido_paterno}} {{$P8->apellido_materno}}<br>
+        <td colspan="2" id="negritas" >{{$P8->nombre}} {{$P8->apellido_paterno}} {{$P8->apellido_materno}}<br>
             {{$P8->cargo}} <br>
             Cumpleaños: {{$P8->cumpleaños}}
             </td>
-        <td rowspan="3"> 
-            <img src="{{ asset('storage').'/'. $P8->foto}}" class="img-thumbnail img-fluid" alt="" width="100">
+        <td rowspan="3" align="center"> 
+            <img src="{{ asset('storage').'/'. $P8->foto}}" class="img-thumbnail img-fluid" alt="" width="120">
         </td>
         </tr>
         <tr>

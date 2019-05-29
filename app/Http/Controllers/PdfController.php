@@ -11,6 +11,10 @@ class PdfController extends Controller
         $this->middleware('auth');
     }
 
+    public function index(){
+        return view('reporte.index');
+    }
+
     public function generar(){
        /*$Personas = \DB::table('personal')->select(['id','nombre', 'apellido_paterno','apellido_materno','correo','cargo','direccion','telefono','foto','cumpleaños', 'celular','sec_part_nombre','sec_part_telefono','sec_part_correo']) */
        $Personas = \DB::table('personal')->where('puesto_id','1')
@@ -35,5 +39,19 @@ class PdfController extends Controller
         return $pdf->stream('informe');
 
     } 
+
+    public function postReporte(Request $request){
+       /* $fecha = $request->input("date");
+        $Persona = \DB::table('personal')->WhereDate('created_at',$fecha)->get();
+        $view = \View::make('reporte', compact('persona'))->render();
+        $pdf = \App::make('dompsf.wrapper');
+        $pdf->loadHTML($view);
+        return $pdf->stream('informe');
+        //dd($Persona);
+       // return view('reporte.index');*/
+
+       dd($request->date);
+    }
+
 
 }

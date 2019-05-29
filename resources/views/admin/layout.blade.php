@@ -24,11 +24,28 @@
     <link href=" {{ asset('admin/node_modules/flag-icon-css/css/flag-icon.min.css') }} " rel="stylesheet">
     <link href=" {{ asset('admin/node_modules/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href=" {{ asset('admin/node_modules/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
+    
     <!-- Main styles for this application-->
     <link href=" {{ asset('admin/css/style.css') }}" rel="stylesheet">
     <link href=" {{ asset('admin/vendors/pace-progress/css/pace.min.css') }}" rel="stylesheet">
+ <!-- Bootstrap -->
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+   
+
+    <!-- Datepicker Files -->
+    <link rel="stylesheet" href="{{asset('datepicker/css/bootstrap-datepicker3.css')}} ">
+
+   <link rel="stylesheet" href="{{asset('datepicker/css/bootstrap-datepicker3.standalone.css')}} ">
+   <script src="{{asset('datepicker/js/bootstrap-datepicker.js')}} "></script>
+
+   <!-- Lenguaje -->
+   <script src="{{asset('datepicker/locales/bootstrap-datepicker.es.min.js')}} "></script>
+
+  </body>
     <!-- Global site tag (gtag.js) - Google Analytics-->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+    <!--<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script> -->
     <script>
       window.dataLayer = window.dataLayer || [];
 
@@ -68,12 +85,12 @@
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            <img class="img-avatar" src=" {{ asset('admin/img/avatars/6.jpg') }}" alt=" {{ Auth::user()->name}} ">
+            <img class="img-avatar" src=" {{ asset('admin/img/avatars/6.jpg') }}" alt="">
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             
             <div class="dropdown-header text-center">
-              <strong>Settings</strong>
+              <strong>{{ Auth::user()->name}}</strong>
             </div>
             
             <div class="dropdown-divider"></div>
@@ -108,6 +125,21 @@
                     <i class="nav-icon icon-puzzle"></i> Reportes.</a>
                 </li>
                 
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> Graficas</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url('/pdf/index')}} ">
+                    <i class="nav-icon icon-puzzle"></i>Generar por Fecha</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url('/Graficas/total')}} ">
+                    <i class="nav-icon icon-puzzle"></i>General </a>
+                </li>
+              
               </ul>
             </li>
           </ul>
@@ -428,5 +460,11 @@
     <script src="{{ asset('admin/node_modules/pace-progress/pace.min.js') }}"></script>
     <script src="{{ asset('admin/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('admin/node_modules/@coreui/coreui/dist/js/coreui.min.js') }}"></script>
-  </body>
+    <script src="{{ asset('admin/js/echarts.min.js')}} "></script>
+    <script src="{{ asset('admin/js/world.js')}} "></script>
+    <script src="{{ asset('admin/js/dataTool.js') }} "></script>
+    <script src="{{ asset('admin/js/bmap.js')}} "></script>
+    
+    @yield('script');
+    
 </html>

@@ -23,7 +23,7 @@ class PersonasController extends Controller
 
     public function index()
     {
-        $datos= Personal::paginate(5);
+        $datos= Personal::paginate(10);
         //$puesto = Personal::find(2);
         //dd($puesto->name_puesto);
         return view('Personas.index',['datos'=>$datos]);
@@ -48,14 +48,15 @@ class PersonasController extends Controller
      */
     public function store(Request $request)
     {
-        //$datosPersonas = $request->all();
+        
         $datosPersonas= $request->except('_token');
         if ($request->hasFile('foto')) {
            $datosPersonas['foto']=$request->file('foto')->store('uploads','public');
         }
-
-        Personal::insert($datosPersonas);
-        //return response()->json($datosPersonas);
+      
+        $personales = new Personal($datosPersonas);
+        $personales->save();
+        
         return redirect('personas')->with('Mensaje','Persona agregado con éxito');
 
     }

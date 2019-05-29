@@ -13,20 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login2');
-});
-//Route::get('/personas', 'PersonasController@index');
-//Route::get('/personas/create', 'PersonasController@create');
+Route::get('/', 'Auth\LoginController@showLoginForm');
+
+
+
 Auth::routes([ 'reset'=>false]);
+
 Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('personas', 'PersonasController');
-    
-
-    Route::get('/home', 'HomeController@index')->name('home');
 
     Route::get('pdf', 'PdfController@generar');
+    Route::get('pdf/index', 'PdfController@index');
+    Route::post('pdf/index', 'PdfController@postReporte');
+    Route::post('Graficas','GraficasController@Index');
+    Route::get('Graficas/total','GraficasController@VerGeneral');
+
 });
 
 
